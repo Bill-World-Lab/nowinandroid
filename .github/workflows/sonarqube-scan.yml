@@ -21,10 +21,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install SonarQube Scanner
+      - name: Download and Install SonarQube Scanner
         run: |
-          sudo apt-get update
-          sudo apt-get install -y sonar-scanner
+          wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+          unzip sonar-scanner-cli-5.0.1.3006-linux.zip
+          echo "$PWD/sonar-scanner-5.0.1.3006-linux/bin" >> $GITHUB_PATH
 
       - name: Run SonarQube Scan
         env:
