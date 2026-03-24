@@ -25,9 +25,9 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           sonar-scanner \
-            -Dsonar.projectKey=YOUR_PROJECT_KEY \
-            -Dsonar.organization=YOUR_ORG_KEY \
-            -Dsonar.host.url=YOUR_SONARQUBE_URL \
+            -Dsonar.projectKey=nowinandroid \
+            -Dsonar.organization=bill-world-lab \
+            -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=$SONAR_TOKEN \
             -Dsonar.sarifReportPaths=sonar-report.sarif
 
