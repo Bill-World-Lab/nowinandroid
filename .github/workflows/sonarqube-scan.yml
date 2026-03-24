@@ -23,10 +23,10 @@ jobs:
 
       - name: Install SonarQube Scanner
         run: |
-          apt-get update
-          apt-get install -y sonar-scanner
+          sudo apt-get update
+          sudo apt-get install -y sonar-scanner
 
-      - name: SonarQube Scan
+      - name: Run SonarQube Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
