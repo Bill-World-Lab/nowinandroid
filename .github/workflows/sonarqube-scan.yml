@@ -21,6 +21,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Install SonarQube Scanner
+        run: |
+          apt-get update
+          apt-get install -y sonar-scanner
+
       - name: SonarQube Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
