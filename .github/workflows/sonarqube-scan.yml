@@ -2,9 +2,9 @@ name: SonarQube Scan with SARIF Reporting
 
 on:
   push:
-    branches: [main]
+    branches: [add_sonarqube]
   pull_request:
-    branches: [main]
+    branches: [add_sonarqube]
 
 jobs:
   sonarqube:
